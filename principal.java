@@ -17,6 +17,7 @@ public class principal {
             res += x[i];
         }
 
+        System.out.println("La suma total de los cinco números es:");
         System.out.println(res);
     }
 
