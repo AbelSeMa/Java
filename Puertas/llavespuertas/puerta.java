@@ -30,7 +30,8 @@ public class puerta {
             return false;
         }
         if (estado != false) {
-            return false;        }
+            return false;
+        }
         if (this.color != llave.Color()) {
             return false;
         }
