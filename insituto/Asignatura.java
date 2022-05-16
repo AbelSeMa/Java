@@ -36,4 +36,8 @@ public class Asignatura {
 
         return media;
     }
+
+    public float getNota(Alumno alumno, int trimestre) {
+        return notas.get(alumno).get(trimestre);
+    }
 }
