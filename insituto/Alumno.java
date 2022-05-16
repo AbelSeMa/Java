@@ -21,6 +21,14 @@ public class Alumno {
         return this;
     }
 
+    public float media(Asignatura asignatura) {
+        return asignatura.media(this);
+    }
+
+    public float nota(Asignatura asignatura, int trimestre) {
+        return asignatura.getNota(this, trimestre);
+    }
+
     public boolean aprobada(Asignatura asignatura) {
         if (asignatura.media(this) < 5) {
             return false;
