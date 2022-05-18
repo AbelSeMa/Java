@@ -30,7 +30,7 @@ public class Alumno {
     }
 
     public boolean aprobada(Asignatura asignatura) {
-        if (asignatura.media(this) < 5) {
+        if (asignatura.media(this) < 5.0f) {
             return false;
         }
         return true;

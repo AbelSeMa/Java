@@ -17,6 +17,7 @@ public class Asignatura {
     }
 
     public boolean anyadirAlumno(Alumno alumno) {
+        notas.put(alumno, new HashMap<>());
         return alumnos.add(alumno);
     }
 
@@ -28,8 +29,8 @@ public class Asignatura {
     }
 
     public float media(Alumno alumno) {
-        float media = 0.0f;
-        for (int nota = 0; nota < notas.size(); nota++) {
+        float media = 0f;
+        for (int nota = 1; nota < notas.size(); nota++) {
             float n = notas.get(alumno).get(nota);
             media += n;
         };
