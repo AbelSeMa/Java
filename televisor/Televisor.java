@@ -5,13 +5,13 @@ public class Televisor {
     private boolean estado;
     private int canal;
     private int volumen;
-    private Soporte puerto;
+    private Soporte usb;
 
     public Televisor() {
         estado = false;
         canal = 1;
         volumen = 0;
-        puerto = null;
+        usb = null;
     }
 
     public Televisor encender() {
@@ -57,19 +57,19 @@ public class Televisor {
     }
 
     public Televisor conectar(Soporte usb) {
-        puerto = usb;
+        this.usb = usb;
         return this;
 
     }
 
     public Televisor desconectarSiConectado() {
-        puerto = null;
+        usb = null;
         return this;
     }
 
     public List<String> reproducirSiConectado() {
-        if (estado == true && puerto != null) {
-            return new ArrayList<>(puerto.playlist());
+        if (estado == true && usb != null) {
+            return new ArrayList<>(usb.playlist());
         }
 
         return new ArrayList<>();
